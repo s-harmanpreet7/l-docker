@@ -5,8 +5,9 @@ FROM node:8-alpine
 WORKDIR /usr/app
 
 # Install dependencies
-COPY ./ ./
+COPY ./package.json ./
 RUN npm install
+COPY ./ ./
 
 # Default commands
 CMD ["npm", "start"]
